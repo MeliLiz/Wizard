@@ -36,13 +36,27 @@ public abstract class PushPop<T> {
         return valor;
     }
 
-
+    /**
+     * Regresa el elemento de la cabeza
+     * @return
+     */
     public T peek(){
         if (isEmpty()) {
             throw new NoSuchElementException("");
         }
         return cabeza.elemento;
     } 
+
+    /**
+     * Regresa el elemento de la cola
+     * @return
+     */
+    public T peek2(){
+        if (isEmpty()) {
+            throw new NoSuchElementException("");
+        }
+        return ultimo.elemento;
+    }
 
     /**
      * Regresa el número de elementos en la estructura.

@@ -332,12 +332,12 @@ public class Lista<T> implements Collection<T> {
     public String toString() {
         String cadena = "";
         if (isEmpty()) {
-            return "";
+            return cadena;
         } else {
             Nodo actual = cabeza; // Nodo para iterar la lista
-            while (actual.siguiente != null) {
+            while (actual.siguiente!=null) {
                 cadena += actual.elemento + ", ";
-                actual = actual.siguiente;
+                    actual = actual.siguiente;  
             }
             cadena += actual.elemento;
         }
@@ -441,14 +441,52 @@ public class Lista<T> implements Collection<T> {
      * @param i
      */
     public T eliminaEnPos(int i) {
-        T regreso;
-        if (i <= 0) {
+        if(isEmpty()){
+            throw new NullPointerException("No se puede eliminar un elemento en una lista vacía");
+        }else{
+            T regreso;
+            if(longi==1){
+                regreso=cabeza.elemento;
+                this.empty();
+            }else if(i<=0){
+                regreso=cabeza.elemento;
+                cabeza=cabeza.siguiente;
+                cabeza.anterior=null;
+                longi--;
+            }else if(i>=size()-1){
+                regreso=pop();
+            }else{
+                Nodo aux = cabeza;
+                int contador=0;
+                while(contador<i){
+                    aux=aux.siguiente;
+                    contador++;
+                }
+                regreso=aux.elemento;
+                aux.anterior.siguiente=aux.siguiente;
+                aux.siguiente.anterior=aux.anterior;
+                aux.anterior=aux.siguiente=null;
+                longi--;
+            }
+
+            return regreso;
+        }
+        
+        /*if (i <= 0) {
             regreso = cabeza.elemento;
             cabeza = cabeza.siguiente;
-            cabeza.anterior = null;
+            if(longi!=1){
+                cabeza.anterior = null;
+            }
+            
         } else if (i >= longi) {
             regreso = pop();
-        } else {
+        } else if(longi==1){
+            regreso=cabeza.elemento;
+            this.empty();
+        }else if(i==longi-1){
+            regreso=pop();
+        }else {
             Nodo actual = cabeza;// Nodo para iterar la lista
             int contador = 0;
             while (contador != i) {
@@ -460,7 +498,8 @@ public class Lista<T> implements Collection<T> {
             actual.siguiente.anterior = actual.anterior;
         }
         longi--;
-        return regreso;
+        return regreso;*/
+        
     }
 
     /**

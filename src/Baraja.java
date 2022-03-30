@@ -75,8 +75,8 @@ public class Baraja {
             Lista<Carta> porDar = new Lista<Carta>();
             for(int i=0;i<num;i++){
                 porDar.add(CartaSiguiente());
-                return porDar;
             }
+            return porDar;
         }
         return null;
 
