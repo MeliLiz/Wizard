@@ -1,0 +1,4 @@
+
+Solo se puede ver el historial de cada ronda una vez terminada la rondaSiempre se puede ver el historial de la ronda anterior
+Para salir, -1
+Para historial -2

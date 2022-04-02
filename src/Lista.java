@@ -80,7 +80,7 @@ public class Lista<T> implements Collection<T> {
     private int longi;
 
     /**
-     * Agrega un elemento a la lista.
+     * Agrega un elemento al final de la lista
      * 
      * @param elemento el elemento a agregar.
      * @throws IllegalArgumentException si <code>elemento</code> es
@@ -472,33 +472,6 @@ public class Lista<T> implements Collection<T> {
             return regreso;
         }
         
-        /*if (i <= 0) {
-            regreso = cabeza.elemento;
-            cabeza = cabeza.siguiente;
-            if(longi!=1){
-                cabeza.anterior = null;
-            }
-            
-        } else if (i >= longi) {
-            regreso = pop();
-        } else if(longi==1){
-            regreso=cabeza.elemento;
-            this.empty();
-        }else if(i==longi-1){
-            regreso=pop();
-        }else {
-            Nodo actual = cabeza;// Nodo para iterar la lista
-            int contador = 0;
-            while (contador != i) {
-                actual = actual.siguiente;
-                contador++;
-            }
-            regreso = actual.elemento;
-            actual.anterior.siguiente = actual.siguiente;
-            actual.siguiente.anterior = actual.anterior;
-        }
-        longi--;
-        return regreso;*/
         
     }
 

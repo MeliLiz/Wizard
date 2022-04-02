@@ -3,25 +3,26 @@ package src.edd;
 import src.edd.Jugador;
 
 public class Registro {
-    Cola<Jugador> ganadoresPorRonda;
-    Cola<Cola<Jugador>> ganadoresDeTrucos;
-    Cola<Carta[][]> cartasTiradasJ;
+    //Lista<Jugador> ganadoresPorRonda;
+    Lista<Cola<Jugador>> ganadoresDeTrucos;
+    Lista<Carta[][]> cartasTiradasJ;
 
     public Registro(){
-        ganadoresDeTrucos=new Cola<Lista<Jugador>>();
-        ganadoresPorRonda=new Cola<Jugador>();
-        cartasTiradasJ=new Cola<Carta[][]>();
+        ganadoresDeTrucos=new Lista<Cola<Jugador>>();
+        //ganadoresPorRonda=new Lista<Jugador>();
+        cartasTiradasJ=new Lista<Carta[][]>();
     }
 
-    public Cola<Jugador> getGanadoresPorRonda(){
-        return ganadoresPorRonda;
-    }
+    //public Lista<Jugador> getGanadoresPorRonda(){
+      
+      //  return ganadoresPorRonda;
+    //}
 
-    public Cola<Cola<Jugador>> getGanadoresDeTrucos(){
+    public Lista<Cola<Jugador>> getGanadoresDeTrucos(){
         return ganadoresDeTrucos;
     }
 
-    public Cola<Carta[][]> getCartasTiradas(){
+    public Lista<Carta[][]> getCartasTiradas(){
         return cartasTiradasJ;
     }
 }

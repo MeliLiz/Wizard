@@ -29,7 +29,7 @@ public class Carta {
     }
 
     public String toString() {
-        return "[" + palo + numero + blanco + "]";
+        return "[" + palo + numero + "\u001B[0m" + "]";
     }
 
 }

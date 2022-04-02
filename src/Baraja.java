@@ -42,6 +42,7 @@ public class Baraja {
         Random random = new Random();
         int posicionAleatoria=0;
         Carta carta1,carta2;
+        iterador=cartas.iterator();
         for(int i=0;i<cartas.size()-1;i++){
             posicionAleatoria=random.nextInt(numCARTAS-1);
             carta1=cartas.elementoEnPos(i);
@@ -60,7 +61,7 @@ public class Baraja {
             System.out.println("No hay mas cartas");
         }else{
             carta=iterador.next();
-            numDisponibles--;
+            //numDisponibles--;
         }
         return carta;
     }
@@ -69,9 +70,9 @@ public class Baraja {
     public Lista<Carta> darCartas(int num){
         if(num>numCARTAS){
             System.out.println("No hay tantas cartas en la baraja");
-        }else if(numDisponibles<num){
+        }/*else if(numDisponibles<num){
             System.out.println("No hay suficientes cartas en la baraja");
-        }else{
+        }*/else{
             Lista<Carta> porDar = new Lista<Carta>();
             for(int i=0;i<num;i++){
                 porDar.add(CartaSiguiente());
