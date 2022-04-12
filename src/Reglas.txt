@@ -1,4 +1,71 @@
+                          ¡VAMOS A JUGAR WIZARD!
+Bienvenido al programa simulador del juego de cartas Wizard, donde cada
+ronda se jugará un número de bazas a los que se les conoce como trucos. El 
+ganador de cada truco será quien juegue la carta más valiosa. Cada jugador
+al inicio de cada  ronda debe apostar cuántos trucos va a ganar y si al final 
+de la ronda acertó gana puntos, de los contrario, los pierde.
 
-Solo se puede ver el historial de cada ronda una vez terminada la rondaSiempre se puede ver el historial de la ronda anterior
-Para salir, -1
-Para historial -2
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+JUGADORES
+3 a 6 jugadores 
+
+ELEMENTOS DEL JUEGO 
+        - Cartas: Baraja de cuatro palos, cuyos valores oscilan del 1 al 13 
+        sin repeticiones. Además habrá cuatro cartas denominadas Magos y otras 
+        cuatro llamadas Bufones. Por lo tanto en total habrá 60 cartas.
+        - Rondas: El juego se lleva a cabo por rondas, cada ronda consiste en 
+        cierto número de trucos. La ronda 1 sólo tiene un truco, la ronda 2 tiene
+        2 trucos y así consecutivamente.
+        - Trucos: Con truco nos referimos a que cada jugador debe jugar una carta 
+        sobre la mesa. El ganador del truco será el jugador que haya puesto la 
+        carta más valiosa.
+        - Palo de triunfo: En cada ronda existirá un palo de triunfo. Las cartas 
+        de este palo serán las más valiosas.
+        - Palo líder: En cada truco habrá un palo líder. Los jugadores estarán 
+        obligador a jugar este palo de ser posible.
+        - Magos: No pertencerán a ningún palo, pero son las cartas son las más 
+        valiosas.
+        - Bufones: No pertencen a ningún palo y son las cartas menos valiosas del
+        juego.
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+DESAROLLO DEL JUEGO
+    1. El jugador inicial en el primer truco de la ronda será el que esté a la 
+    izquierda de quien barajeó el mazo. En trucos subsecuentes, el jugador inicial
+    será quien ganó el truco anterior.
+    2. Cada jugador, comenzando por el jugador inicial y en sentido de las agujas 
+    del reloj, deberá jugar una carta.
+    3. El palo líder lo establecerá la primera carta numerada que se haya jugado 
+    durante el truco, esto quiere decir que si el jugador inicial jugó un mago o 
+    bufón, entonces el segundo jugador podrá elegir el palo guía si decide jugar 
+    una carta numerada, pero si tambi ́en juega un mago o bufón, entonces será el 
+    tercer jugador quien lo decida con una carta numerada, a no ser que también 
+    juegue un mago o un bufón, por lo que la decisión recaería en el cuarto jugador
+     y así sucesivamente.
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+REGLAS PARA JUGAR UNA CARTA 
+En cada truco, los jugadores están obligados a jugar una carta que corresponda con 
+el palo líder de ser posible, habiendo excepciones. Las reglas que debe seguir cada
+para jugar una carta son las siguientes:
+    1. Si tiene un mago puede jugarlo sin restricciones.
+    2. Si tiene un bufón puede jugarlo sin restricciones.
+    3. Si quiere jugar una carta numerada:
+        a. Si tiene cartas que coincidan con el palo líder, esta obligado a jugar 
+        una de esas cartas.
+        b. Si no tiene cartas que coincidan con el palo líder, puede jugar una carta 
+        de cualquier otro palo, esto incluye cartas del palo de triunfo si busca ganar 
+        la partida.
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+GANADOR DEL TRUCO 
+Después de que todos los jugadores bajaron una carta, se decide como ganador del 
+truco al primero que cumpla con alguna de estas condiciones en este orden:
+    1. Fue el primero en jugar un mago.
+    2. Jugó la carta más alta del palo de triunfo.
+    3. Jugó la carta más alta del palo líder.
+    4. Fue el primero en jugar un bufón.
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+FIN DEL JUEGO
+Una vez que terminaron todas las rondas, se suma la puntuación de cada una de ellas.
+EL jugador con la puntuación más alta será el ganador. Puede haber empates.
+
+
+

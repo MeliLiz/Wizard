@@ -2,19 +2,19 @@ package src.edd;
 
 public class Cola<T> extends PushPop<T> {
     // Agregar al final.
-    public void push(T elemento){
-        if(elemento == null){
+    public void push(T elemento) {
+        if (elemento == null) {
             throw new IllegalArgumentException("");
         }
         Nodo aux = new Nodo(elemento);
-        if(isEmpty()){
-            this.cabeza=ultimo=aux;
+        if (isEmpty()) {
+            this.cabeza = ultimo = aux;
             longi++;
-            return ;
+            return;
         }
         ultimo.siguiente = aux;
         ultimo = aux;
-        longi ++;
+        longi++;
 
     }
 
@@ -23,7 +23,7 @@ public class Cola<T> extends PushPop<T> {
      * 
      * @return un clon de la estructura.
      */
-    public Cola<T> clone(){
+    public Cola<T> clone() {
         Cola<T> nueva = new Cola<T>();
         if (this.isEmpty()) {
             return nueva;
@@ -31,14 +31,14 @@ public class Cola<T> extends PushPop<T> {
         nueva.push(this.cabeza.elemento);
         Nodo n = this.cabeza;
         while (n.siguiente != null) {
-           nueva.push(n.siguiente.elemento);
-           n = n.siguiente;
+            nueva.push(n.siguiente.elemento);
+            n = n.siguiente;
         }
         return nueva;
 
     }
 
-    public String toString(){
+    public String toString() {
         if (this.isEmpty()) {
             return "";
         }
