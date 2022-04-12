@@ -163,7 +163,7 @@ public class Wizard {
             for (int i = 0; i < jugadores.size(); i++) {
                 Jugador actual = it.next();
                 actual.setCartas(baraja.darCartas(contador + 1));
-                System.out.println(actual.getCartas());
+                //System.out.println(actual.getCartas());
             }
 
             // Sacamos el palo de triunfo de la ronda
